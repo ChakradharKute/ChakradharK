@@ -19,6 +19,11 @@ public class BookController {
 
     @Autowired
     private BookService bookService;
+    
+    @GetMapping()
+    public String saySorry() {
+    return "Sorry";
+    }
 
   @PostMapping("/add")
   public Book addBook(@RequestBody Book book)
