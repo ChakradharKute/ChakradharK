@@ -28,10 +28,10 @@ public class BookController {
 	  
   }
   
-  @GetMapping("/get")
-  public List<Book> getBooks() {
-	  return bookService.getBooks();
-  }
+//  @GetMapping("/get")
+//  public List<Book> getBooks() {
+//	  return bookService.getBooks();
+//  }
   
   @GetMapping("/get/{id}")
   public Book getBookById(@PathVariable int id) {
@@ -50,6 +50,11 @@ public class BookController {
 	 Optional<Book> b=  bookService.updateBookById(book, id);
 	return b;
 	  
+  }
+  
+  @GetMapping("/h")
+  public String welcome() {
+	  return "Hi";
   }
 	  
   }
